@@ -1,0 +1,662 @@
+.diagnose-page {
+    min-height: 100vh;
+    padding: 35px 6%;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.diagnose-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.diagnose-header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.diagnose-back-button {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: white;
+    color: #475569;
+    cursor: pointer;
+}
+
+.diagnose-logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #15803d;
+    color: white;
+}
+
+.diagnose-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.diagnose-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+}
+
+.history-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: 1px solid #15803d;
+    border-radius: 10px;
+    background: white;
+    color: #15803d;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.diagnose-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 17px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.diagnose-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.diagnose-card {
+    padding: 27px;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: white;
+}
+
+.diagnose-card-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 25px;
+}
+
+.diagnose-card-title > div:first-child {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.diagnose-card-title h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.diagnose-card-title p {
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.diagnose-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.diagnose-form-group label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.diagnose-form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    font: inherit;
+}
+
+.diagnose-form-group select:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px #dcfce7;
+}
+
+.upload-area {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 2px dashed #bbf7d0;
+    border-radius: 16px;
+    background: #f0fdf4;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.upload-area:hover {
+    border-color: #16a34a;
+    background: #ecfdf5;
+}
+
+.upload-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background: white;
+    color: #15803d;
+}
+
+.upload-area h3 {
+    margin: 0 0 7px;
+}
+
+.upload-area p {
+    margin: 0 0 8px;
+    color: #64748b;
+}
+
+.upload-area span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.hidden-file-input {
+    display: none;
+}
+
+.image-preview-container {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #f8fafc;
+}
+
+.leaf-preview {
+    width: 100%;
+    height: 320px;
+    display: block;
+    object-fit: contain;
+}
+
+.remove-image-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #dc2626;
+    cursor: pointer;
+}
+
+.selected-file-name {
+    padding: 12px;
+    overflow: hidden;
+    color: #475569;
+    font-size: 13px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.run-diagnosis-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #15803d;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.run-diagnosis-button:hover:not(:disabled) {
+    background: #166534;
+}
+
+.run-diagnosis-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.diagnosis-spinner {
+    width: 17px;
+    height: 17px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: diagnosisSpin 0.8s linear infinite;
+}
+
+@keyframes diagnosisSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.diagnose-help {
+    margin: 12px 0 0;
+    color: #94a3b8;
+    font-size: 12px;
+    text-align: center;
+}
+
+.no-result {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.no-result h3 {
+    margin: 15px 0 6px;
+    color: #475569;
+}
+
+.no-result p {
+    max-width: 340px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.result-success {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    border-radius: 13px;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.result-success span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.result-success h2 {
+    margin: 3px 0 0;
+    text-transform: capitalize;
+}
+
+.result-stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+    margin-top: 18px;
+}
+
+.result-stat-grid > div {
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+    border-radius: 11px;
+    background: #f8fafc;
+}
+
+.result-stat-grid span {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.result-stat-grid strong {
+    margin-top: 5px;
+    font-size: 19px;
+}
+
+.result-section {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.result-section h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.result-section p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+.result-section ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #475569;
+}
+
+.result-section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.recommendation-section {
+    padding: 17px;
+    border: none;
+    border-radius: 12px;
+    background: #f0fdf4;
+}
+
+.result-history-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 22px;
+    padding: 12px;
+    border: 1px solid #15803d;
+    border-radius: 9px;
+    background: white;
+    color: #15803d;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .diagnose-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .diagnose-page {
+        padding: 22px;
+    }
+
+    .diagnose-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .result-stat-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =====================================================
+   AI DIAGNOSIS PAGE - TEXT VISIBILITY FIX
+===================================================== */
+
+/* Main page */
+.diagnose-page {
+    background: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.diagnose-header h1 {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+.diagnose-header p {
+    color: #64748b !important;
+}
+
+/* Header icon */
+.diagnose-header-icon {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+/* Back button */
+.diagnose-back-button {
+    background: #ffffff !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.diagnose-back-button:hover {
+    background: #f1f5f9 !important;
+}
+
+/* =====================================================
+   DIAGNOSIS CARD
+===================================================== */
+
+.diagnose-card {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.diagnose-card h2 {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+.diagnose-card h3 {
+    color: #0f172a !important;
+}
+
+.diagnose-card p {
+    color: #64748b !important;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.diagnose-form label {
+    color: #1e293b !important;
+    font-weight: 700 !important;
+}
+
+.diagnose-form select {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.diagnose-form select option {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.diagnose-form input {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+/* =====================================================
+   PLANTATION SELECT
+===================================================== */
+
+.plantation-select-wrapper {
+    background: #ffffff !important;
+}
+
+.plantation-select-wrapper select {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+/* =====================================================
+   IMAGE UPLOAD AREA
+===================================================== */
+
+.upload-area {
+    background: #f8fafc !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+}
+
+.upload-area h3,
+.upload-area h4 {
+    color: #0f172a !important;
+}
+
+.upload-area p {
+    color: #64748b !important;
+}
+
+/* =====================================================
+   DIAGNOSIS RESULT
+===================================================== */
+
+.diagnosis-result {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.diagnosis-result h2,
+.diagnosis-result h3 {
+    color: #0f172a !important;
+}
+
+.diagnosis-result p {
+    color: #475569 !important;
+}
+
+/* =====================================================
+   RESULT INFORMATION
+===================================================== */
+
+.result-title {
+    color: #15803d !important;
+}
+
+.result-disease-name {
+    color: #166534 !important;
+}
+
+.result-stat {
+    background: #f8fafc !important;
+}
+
+.result-stat span {
+    color: #64748b !important;
+}
+
+.result-stat strong {
+    color: #0f172a !important;
+}
+
+/* =====================================================
+   DESCRIPTION / SYMPTOMS
+===================================================== */
+
+.result-description h3,
+.result-symptoms h3 {
+    color: #0f172a !important;
+}
+
+.result-description p {
+    color: #475569 !important;
+}
+
+.result-symptoms ul,
+.result-symptoms li {
+    color: #475569 !important;
+}
+
+/* =====================================================
+   RECOMMENDATIONS
+===================================================== */
+
+.result-recommendations {
+    background: #f0fdf4 !important;
+}
+
+.result-recommendations h3 {
+    color: #166534 !important;
+}
+
+.result-recommendations li {
+    color: #334155 !important;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.diagnose-button {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+.diagnose-button:hover {
+    background: #166534 !important;
+    color: #ffffff !important;
+}
+
+.history-button {
+    background: #ffffff !important;
+    color: #15803d !important;
+    border: 1px solid #15803d !important;
+}
+
+.history-button:hover {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   GENERAL SAFETY FIX FOR DIAGNOSIS PAGE HEADINGS
+===================================================== */
+
+.diagnose-page h1,
+.diagnose-page h2,
+.diagnose-page h3,
+.diagnose-page h4 {
+    color: #0f172a !important;
+}
+
+/* Keep green result headings green */
+.diagnose-page .result-title,
+.diagnose-page .result-disease-name {
+    color: #15803d !important;
+}

@@ -1,0 +1,10 @@
+@import "./Login.css";
+
+.success-msg{
+    margin-bottom:15px;
+    background:#d1fae5;
+    color:#065f46;
+    padding:10px;
+    border-radius:8px;
+    text-align:center;
+}

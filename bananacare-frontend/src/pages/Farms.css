@@ -1,0 +1,781 @@
+* {
+    box-sizing: border-box;
+}
+
+.farms-page {
+    min-height: 100vh;
+    padding: 35px 6%;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+/* HEADER */
+
+.farms-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.farms-title-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.farms-back-button {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: white;
+    color: #475569;
+    cursor: pointer;
+}
+
+.farms-back-button:hover {
+    background: #f1f5f9;
+}
+
+.farms-header-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #15803d;
+    color: white;
+}
+
+.farms-header h1 {
+    margin: 0;
+    font-size: 29px;
+}
+
+.farms-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+}
+
+.add-farm-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #15803d;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-farm-button:hover {
+    background: #166534;
+}
+
+/* MESSAGES */
+
+.farms-success,
+.farms-error {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 14px 17px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.farms-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.farms-error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* GRID */
+
+.farms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 22px;
+}
+
+.farm-card {
+    padding: 22px;
+    border: 1px solid #e2e8f0;
+    border-radius: 17px;
+    background: white;
+    transition: 0.2s;
+}
+
+.farm-card:hover {
+    transform: translateY(-2px);
+    border-color: #bbf7d0;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+.farm-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.farm-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.farm-card-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.farm-card-actions button {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: white;
+    cursor: pointer;
+}
+
+.farm-edit-button {
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+}
+
+.farm-edit-button:hover {
+    background: #f0fdf4;
+}
+
+.farm-delete-button {
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+.farm-delete-button:hover {
+    background: #fef2f2;
+}
+
+.farm-card h2 {
+    margin: 18px 0 7px;
+    font-size: 21px;
+}
+
+.farm-location {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.farm-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.farm-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #f8fafc;
+    color: #15803d;
+}
+
+.farm-detail div {
+    display: flex;
+    flex-direction: column;
+}
+
+.farm-detail span {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.farm-detail strong {
+    margin-top: 3px;
+    color: #334155;
+    font-size: 12px;
+}
+
+.farm-card-footer {
+    margin-top: 20px;
+}
+
+.farm-card-footer button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px;
+    border: 1px solid #15803d;
+    border-radius: 9px;
+    background: white;
+    color: #15803d;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.farm-card-footer button:hover {
+    background: #15803d;
+    color: white;
+}
+
+/* EMPTY + LOADING */
+
+.farms-empty,
+.farms-loading {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.farms-empty-icon {
+    color: #15803d;
+}
+
+.farms-empty h2 {
+    margin: 17px 0 7px;
+}
+
+.farms-empty p {
+    max-width: 440px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.farms-empty button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 9px;
+    background: #15803d;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.farms-spinner {
+    animation: farmSpin 0.8s linear infinite;
+}
+
+@keyframes farmSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* MODAL */
+
+.farm-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(3px);
+}
+
+.farm-modal {
+    width: 100%;
+    max-width: 750px;
+    max-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+}
+
+.farm-modal-header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 25px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.farm-modal-header span {
+    color: #15803d;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.farm-modal-header h2 {
+    margin: 5px 0 0;
+}
+
+.farm-modal-close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    background: white;
+    color: #475569;
+    cursor: pointer;
+}
+
+.farm-modal-close:hover {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #dc2626;
+}
+
+/* FORM */
+
+.farm-form {
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.farm-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+}
+
+.farm-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.farm-form-group.full {
+    grid-column: 1 / -1;
+}
+
+.farm-form-group label {
+    margin-bottom: 7px;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.farm-form-group input,
+.farm-form-group select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    color: #0f172a;
+    font: inherit;
+}
+
+.farm-form-group input:focus,
+.farm-form-group select:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px #dcfce7;
+}
+
+.farm-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.farm-form-actions button {
+    padding: 11px 18px;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.farm-cancel-button {
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #475569;
+}
+
+.farm-save-button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: none;
+    background: #15803d;
+    color: white;
+}
+
+.farm-save-button:hover {
+    background: #166534;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .farms-page {
+        padding: 20px;
+    }
+
+    .farms-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .farms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .farm-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .farm-form-group.full {
+        grid-column: auto;
+    }
+
+    .farm-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .farm-modal-overlay {
+        padding: 10px;
+    }
+
+    .farm-modal {
+        max-height: calc(100vh - 20px);
+    }
+}
+/* =====================================================
+   FARMS PAGE - TEXT VISIBILITY FIX
+===================================================== */
+
+.farms-page {
+    background: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.farms-page h1,
+.farms-page h2,
+.farms-page h3,
+.farms-page h4 {
+    color: #0f172a !important;
+}
+
+.farms-header h1 {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+.farms-header p {
+    color: #64748b !important;
+}
+
+.farms-header-icon {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.farms-back-button {
+    background: #ffffff !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.farms-back-button:hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* =====================================================
+   FARM CARDS
+===================================================== */
+
+.farm-card {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.farm-card h2,
+.farm-card h3 {
+    color: #0f172a !important;
+}
+
+.farm-card p {
+    color: #64748b !important;
+}
+
+.farm-location {
+    color: #64748b !important;
+}
+
+/* =====================================================
+   FARM DETAILS
+===================================================== */
+
+.farm-detail {
+    background: #f8fafc !important;
+}
+
+.farm-detail span {
+    color: #64748b !important;
+}
+
+.farm-detail strong {
+    color: #1e293b !important;
+}
+
+.farm-detail svg {
+    color: #15803d !important;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.farms-empty {
+    color: #0f172a !important;
+}
+
+.farms-empty h2,
+.farms-empty h3 {
+    color: #0f172a !important;
+}
+
+.farms-empty p {
+    color: #64748b !important;
+}
+
+.farms-empty-icon {
+    color: #15803d !important;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.farms-loading {
+    color: #0f172a !important;
+}
+
+.farms-loading h3 {
+    color: #0f172a !important;
+}
+
+.farms-loading svg {
+    color: #15803d !important;
+}
+
+/* =====================================================
+   ADD / EDIT FARM MODAL
+===================================================== */
+
+.farm-modal {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.farm-modal-header {
+    background: #ffffff !important;
+}
+
+.farm-modal-header h2 {
+    color: #0f172a !important;
+}
+
+.farm-modal-header span {
+    color: #15803d !important;
+}
+
+.farm-modal-close {
+    background: #ffffff !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.farm-modal-close:hover {
+    background: #fef2f2 !important;
+    color: #dc2626 !important;
+    border-color: #fecaca !important;
+}
+
+/* =====================================================
+   FARM FORM
+===================================================== */
+
+.farm-form {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.farm-form-group label {
+    color: #1e293b !important;
+    font-weight: 700 !important;
+}
+
+.farm-form-group input,
+.farm-form-group select,
+.farm-form-group textarea {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.farm-form-group input::placeholder,
+.farm-form-group textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+.farm-form-group select option {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.farm-form-group input:focus,
+.farm-form-group select:focus,
+.farm-form-group textarea:focus {
+    border-color: #16a34a !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px #dcfce7 !important;
+}
+
+/* =====================================================
+   ADD / SAVE BUTTON
+===================================================== */
+
+.add-farm-button,
+.farm-save-button {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+.add-farm-button:hover,
+.farm-save-button:hover {
+    background: #166534 !important;
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   CANCEL BUTTON
+===================================================== */
+
+.farm-cancel-button {
+    background: #ffffff !important;
+    color: #475569 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.farm-cancel-button:hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+}
+
+/* =====================================================
+   EDIT / DELETE BUTTONS
+===================================================== */
+
+.farm-edit-button {
+    background: #ffffff !important;
+    color: #15803d !important;
+}
+
+.farm-edit-button:hover {
+    background: #f0fdf4 !important;
+}
+
+.farm-delete-button {
+    background: #ffffff !important;
+    color: #dc2626 !important;
+}
+
+.farm-delete-button:hover {
+    background: #fef2f2 !important;
+}
+
+/* =====================================================
+   VIEW PLANTATIONS BUTTON
+===================================================== */
+
+.farm-card-footer button {
+    background: #ffffff !important;
+    color: #15803d !important;
+    border: 1px solid #15803d !important;
+}
+
+.farm-card-footer button:hover {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   SUCCESS / ERROR
+===================================================== */
+
+.farms-success {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+}
+
+.farms-error {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+}
+
+/* =====================================================
+   FINAL SAFETY FIX
+   Prevent white text on white background
+===================================================== */
+
+.farms-page h1,
+.farms-page h2,
+.farms-page h3,
+.farms-page h4,
+.farm-modal h1,
+.farm-modal h2,
+.farm-modal h3,
+.farm-modal h4 {
+    color: #0f172a !important;
+}

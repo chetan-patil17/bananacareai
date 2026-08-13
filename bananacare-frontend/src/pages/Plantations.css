@@ -1,0 +1,706 @@
+.plantations-page {
+    min-height: 100vh;
+    padding: 35px 6%;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.plantations-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.plantations-header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.plantation-back-button {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: white;
+    color: #475569;
+    cursor: pointer;
+}
+
+.plantation-header-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #15803d;
+    color: white;
+}
+
+.plantations-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.plantations-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+}
+
+.add-plantation-button,
+.empty-add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #15803d;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.plantation-message {
+    padding: 13px 17px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.plantation-error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.plantation-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.plantation-summary {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.plantation-summary-card {
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: white;
+    color: #15803d;
+}
+
+.plantation-summary-card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.plantation-summary-card span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.plantation-summary-card strong {
+    margin-top: 3px;
+    color: #0f172a;
+    font-size: 22px;
+}
+
+.plantations-grid {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit, minmax(330px, 1fr));
+    gap: 22px;
+}
+
+.plantation-card {
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: white;
+}
+
+.plantation-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plantation-card-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.plantation-status {
+    padding: 7px 11px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.plantation-active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.plantation-inactive {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.plantation-card h2 {
+    margin: 18px 0 4px;
+}
+
+.banana-variety {
+    margin: 0 0 20px;
+    color: #15803d;
+    font-weight: 600;
+}
+
+.plantation-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.plantation-details > div {
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.plantation-details span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.plantation-details strong {
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.plantation-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.plantation-date svg {
+    color: #15803d;
+}
+
+.plantation-actions {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.plantation-actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.edit-plantation-button {
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #475569;
+}
+
+.diagnose-plantation-button {
+    border: none;
+    background: #15803d;
+    color: white;
+}
+
+.plantations-empty {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: white;
+}
+
+.plantations-empty-icon {
+    color: #15803d;
+}
+
+.plantations-empty h2 {
+    margin: 17px 0 5px;
+}
+
+.plantations-empty p {
+    max-width: 430px;
+    margin-bottom: 20px;
+    color: #64748b;
+}
+
+.plantation-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.plantation-modal {
+    width: 100%;
+    max-width: 720px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 28px;
+    border-radius: 18px;
+    background: white;
+}
+
+.plantation-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.plantation-modal-header h2 {
+    margin: 0;
+}
+
+.plantation-modal-header p {
+    margin: 5px 0 0;
+    color: #64748b;
+}
+
+.plantation-close-button {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #475569;
+    cursor: pointer;
+}
+
+.plantation-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.plantation-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.plantation-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.plantation-form-group label {
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.plantation-form-group input,
+.plantation-form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    outline: none;
+    background: white;
+    font: inherit;
+}
+
+.plantation-form-group input:focus,
+.plantation-form-group select:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px #dcfce7;
+}
+
+.plantation-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.plantation-cancel-button,
+.plantation-save-button {
+    padding: 12px 20px;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.plantation-cancel-button {
+    border: 1px solid #cbd5e1;
+    background: white;
+    color: #475569;
+}
+
+.plantation-save-button {
+    border: none;
+    background: #15803d;
+    color: white;
+}
+
+.plantation-save-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media (max-width: 700px) {
+    .plantations-page {
+        padding: 22px;
+    }
+
+    .plantations-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .plantation-summary {
+        flex-direction: column;
+    }
+
+    .plantation-summary-card {
+        min-width: auto;
+    }
+
+    .plantations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plantation-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plantation-form-group.full-width {
+        grid-column: auto;
+    }
+
+    .plantation-details {
+        grid-template-columns: 1fr;
+    }
+}
+/* =====================================================
+   PLANTATIONS PAGE - TEXT VISIBILITY FIX
+===================================================== */
+
+.plantations-page {
+    background: #f8fafc !important;
+    color: #0f172a !important;
+}
+
+/* PAGE HEADER */
+
+.plantations-page h1,
+.plantations-page h2,
+.plantations-page h3,
+.plantations-page h4 {
+    color: #0f172a !important;
+}
+
+.plantations-header h1 {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+.plantations-header p {
+    color: #64748b !important;
+}
+
+/* BACK BUTTON */
+
+.plantations-back-button {
+    background: #ffffff !important;
+    color: #475569 !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.plantations-back-button:hover {
+    background: #f1f5f9 !important;
+}
+
+/* HEADER ICON */
+
+.plantations-header-icon {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+/* =====================================================
+   FARM INFORMATION
+===================================================== */
+
+.plantation-farm-info {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.plantation-farm-info h2,
+.plantation-farm-info h3 {
+    color: #0f172a !important;
+}
+
+.plantation-farm-info p,
+.plantation-farm-info span {
+    color: #64748b !important;
+}
+
+/* =====================================================
+   PLANTATION CARDS
+===================================================== */
+
+.plantation-card {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.plantation-card h2,
+.plantation-card h3 {
+    color: #0f172a !important;
+}
+
+.plantation-card p {
+    color: #64748b !important;
+}
+
+.plantation-card span {
+    color: #64748b !important;
+}
+
+.plantation-card strong {
+    color: #1e293b !important;
+}
+
+/* DETAILS */
+
+.plantation-detail {
+    background: #f8fafc !important;
+}
+
+.plantation-detail span {
+    color: #94a3b8 !important;
+}
+
+.plantation-detail strong {
+    color: #334155 !important;
+}
+
+/* =====================================================
+   STATUS / GROWTH STAGE
+===================================================== */
+
+.plantation-status {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+}
+
+.growth-stage {
+    background: #f0fdf4 !important;
+    color: #15803d !important;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.plantations-empty {
+    color: #0f172a !important;
+}
+
+.plantations-empty h2,
+.plantations-empty h3 {
+    color: #0f172a !important;
+}
+
+.plantations-empty p {
+    color: #64748b !important;
+}
+
+/* =====================================================
+   CREATE / EDIT MODAL
+===================================================== */
+
+.plantation-modal {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.plantation-modal-header {
+    background: #ffffff !important;
+}
+
+.plantation-modal-header h2 {
+    color: #0f172a !important;
+}
+
+.plantation-modal-header span {
+    color: #15803d !important;
+}
+
+.plantation-modal-close {
+    background: #ffffff !important;
+    color: #475569 !important;
+}
+
+.plantation-modal-close:hover {
+    background: #fef2f2 !important;
+    color: #dc2626 !important;
+}
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.plantation-form {
+    color: #0f172a !important;
+}
+
+.plantation-form label {
+    color: #1e293b !important;
+    font-weight: 700 !important;
+}
+
+.plantation-form input,
+.plantation-form select,
+.plantation-form textarea {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.plantation-form input::placeholder,
+.plantation-form textarea::placeholder {
+    color: #94a3b8 !important;
+}
+
+.plantation-form select option {
+    background: #ffffff !important;
+    color: #0f172a !important;
+}
+
+.plantation-form input:focus,
+.plantation-form select:focus,
+.plantation-form textarea:focus {
+    border-color: #16a34a !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px #dcfce7 !important;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.add-plantation-button,
+.plantation-save-button {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+.add-plantation-button:hover,
+.plantation-save-button:hover {
+    background: #166534 !important;
+    color: #ffffff !important;
+}
+
+.plantation-cancel-button {
+    background: #ffffff !important;
+    color: #475569 !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* VIEW / DIAGNOSE BUTTON */
+
+.plantation-view-button,
+.plantation-diagnose-button {
+    color: #15803d !important;
+    background: #ffffff !important;
+    border: 1px solid #15803d !important;
+}
+
+.plantation-view-button:hover,
+.plantation-diagnose-button:hover {
+    background: #15803d !important;
+    color: #ffffff !important;
+}
+
+/* EDIT */
+
+.plantation-edit-button {
+    color: #15803d !important;
+    background: #ffffff !important;
+}
+
+/* =====================================================
+   ERROR / SUCCESS
+===================================================== */
+
+.plantations-error {
+    background: #fee2e2 !important;
+    color: #b91c1c !important;
+}
+
+.plantations-success {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+}
+
+/* =====================================================
+   FINAL SAFETY FIX
+   Prevent white headings on white background
+===================================================== */
+
+.plantations-page h1,
+.plantations-page h2,
+.plantations-page h3,
+.plantations-page h4,
+.plantation-modal h1,
+.plantation-modal h2,
+.plantation-modal h3,
+.plantation-modal h4 {
+    color: #0f172a !important;
+}
